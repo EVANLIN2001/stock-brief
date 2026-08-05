@@ -1,0 +1,13 @@
+# macOS
+.DS_Store
+__MACOSX/
+
+# Python
+__pycache__/
+*.pyc
+
+# 中繼資料（每次執行都會重產，不需要進版控）
+/tmp/
+data_tw.json
+data_us.json
+notes.json

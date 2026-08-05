@@ -1,0 +1,20 @@
+{
+  "_comment": "追蹤清單。要新增標的就在對應陣列加一筆；上市用 .TW、上櫃用 .TWO、美股直接用代號。",
+  "tw": [
+    { "code": "2330", "name": "台積電", "yahoo": "2330.TW", "market": "TWSE" },
+    { "code": "5425", "name": "台半", "yahoo": "5425.TWO", "market": "TPEx" }
+  ],
+  "us": [
+    { "symbol": "MU", "name": "美光 Micron" }
+  ],
+  "context_tw": [
+    { "symbol": "^TWII", "name": "加權指數" },
+    { "symbol": "^TWOII", "name": "櫃買指數" }
+  ],
+  "context_us": [
+    { "symbol": "^SOX", "name": "費城半導體" },
+    { "symbol": "^IXIC", "name": "那斯達克" },
+    { "symbol": "^GSPC", "name": "S&P 500" },
+    { "symbol": "TSM", "name": "台積電 ADR" }
+  ]
+}
