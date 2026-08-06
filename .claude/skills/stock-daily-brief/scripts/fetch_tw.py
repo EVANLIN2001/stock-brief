@@ -234,6 +234,9 @@ def main():
             # 誰的日期新就用誰，並把來源寫進 resolved，報告才能誠實標註。
             q = rec.get("quote", {})
             t, lb = rec["technical"], bars[-1]
+            hist_src = ch.get("source", "Yahoo Finance")
+            if hist_src != "Yahoo Finance":
+                warn.append(f"{c} Yahoo 不可用，技術面改用{hist_src}計算")
             if q.get("date") and q["date"] >= lb["date"]:
                 rec["resolved"] = dict(q, source="證交所/櫃買官方",
                                        change_pct=t.get("change_pct"))
@@ -242,13 +245,13 @@ def main():
                     "date": lb["date"], "open": lb["open"], "high": lb["high"],
                     "low": lb["low"], "close": t.get("close"), "change": t.get("change"),
                     "change_pct": t.get("change_pct"), "volume_shares": lb["volume"],
-                    "source": "Yahoo Finance（官方檔尚未更新）",
+                    "source": f"{hist_src}（官方日成交檔尚未更新）",
                 }
                 if q.get("date"):
                     warn.append(f"{c} 證交所/櫃買日成交檔只到 {q['date']}，"
-                                f"價格改用 Yahoo {lb['date']} 收盤")
+                                f"價格改用{hist_src} {lb['date']} 收盤")
         except Exception as e:  # noqa: BLE001
-            warn.append(f"{c} Yahoo 歷史行情抓取失敗：{e}")
+            warn.append(f"{c} 歷史行情抓取失敗（主要與備援來源皆失敗）：{e}")
         stocks.append(rec)
 
     ctx = [q for q in (quote_line(x["symbol"], x["name"]) for x in wl.get("context_tw", [])) if q]

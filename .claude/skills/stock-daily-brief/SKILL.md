@@ -49,6 +49,27 @@ python3 scripts/fetch_us.py --out /tmp/data_us.json    # 美股場次
 改用 Yahoo 收盤並標註來源）、連假無資料、某個來源逾時。有 warning 不代表要停，
 代表報告裡要講清楚。
 
+### 行情來源會自動切換
+
+Yahoo 常對特定 IP 整段回 429（query1／query2 都擋），一掛掉技術指標就全空、美股整個
+場次失效，所以每種標的都備了第二條路：
+
+| 標的 | 主要 | 備援 |
+|---|---|---|
+| 上市（.TW） | Yahoo | 證交所 `STOCK_DAY` 月成交檔，往回撈 13 個月 |
+| 上櫃（.TWO） | Yahoo | 櫃買 `tradingStock` 月成交檔，同樣 13 個月 |
+| 加權指數 ^TWII | Yahoo | 證交所 `MI_5MINS_HIST` 月歷史 |
+| 櫃買指數 ^TWOII | Yahoo | **無**。Yahoo 掛掉時這一列會直接消失，不是 bug |
+| 美股個股／ADR | Yahoo | stockanalysis.com |
+| 美股指數 ^SOX ^IXIC ^GSPC | Yahoo | 對應 ETF（SOXX／QQQ／SPY）**代理** |
+
+實際用了哪一條會寫進每檔的 `resolved.source`，切換時也會進 warnings。
+**報告的來源標註一律照 `resolved.source` 寫，不要因為函式叫 `yahoo_chart` 就寫成 Yahoo。**
+
+美股指數走代理時要特別小心：**SOXX 五百多點、費半六千多點，不是同一個量級**。
+腳本已經把 context 的 `name` 改成「費城半導體（SOXX ETF 代理，非指數點位）」，
+報告要照這個名稱寫，只引用漲跌百分比，**不要把 ETF 價位當成指數點位講出去**。
+
 ### 2. 查消息面
 
 用 `web_search`，每檔 3–5 則。台股用中文查、美股用英文查：

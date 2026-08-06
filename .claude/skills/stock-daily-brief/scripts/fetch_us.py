@@ -44,12 +44,15 @@ def main():
             rec["currency"] = ch.get("currency")
             rec["market_state"] = ch.get("market_state")
             rec["technical"] = tech
+            src = ch.get("source", "Yahoo Finance")
             rec["resolved"] = {
                 "date": lb["date"], "open": lb["open"], "high": lb["high"], "low": lb["low"],
                 "close": tech.get("close"), "change": tech.get("change"),
                 "change_pct": tech.get("change_pct"), "volume_shares": lb["volume"],
-                "source": "Yahoo Finance",
+                "source": src,
             }
+            if src != "Yahoo Finance":
+                warn.append(f"{t['symbol']} Yahoo 不可用，行情改用{src}")
             m = ch.get("meta", {})
             # 盤前／盤後報價（有才給，沒有不要硬湊）
             for k, label in (("preMarketPrice", "pre"), ("postMarketPrice", "post")):
@@ -58,7 +61,7 @@ def main():
             rec["history"] = [{"d": b["date"], "c": round(b["close"], 2), "v": b["volume"]}
                               for b in bars[-60:]]
         except Exception as e:  # noqa: BLE001
-            warn.append(f"{t['symbol']} 行情抓取失敗：{e}")
+            warn.append(f"{t['symbol']} 行情抓取失敗（主要與備援來源皆失敗）：{e}")
         stocks.append(rec)
 
     ctx = [q for q in (quote_line(x["symbol"], x["name"]) for x in wl.get("context_us", [])) if q]

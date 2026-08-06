@@ -60,18 +60,33 @@ python3 .claude/skills/stock-daily-brief/scripts/fetch_us.py --out /tmp/data_us.
 看得到「寫出 ...｜交易日 YYYY-MM-DD」就是通了。stdout 的 warnings 要看一下。
 只用標準函式庫，不需要 pip install。
 
-## 已知的資料源問題
+## 資料源備援（Yahoo 429 對策）
 
-**Yahoo Finance 回 429（Too Many Requests）**
-2026-08-06 從本機測試時，`query1` 與 `query2` 兩個 host 全被擋，
-連 cookie + crumb 流程也拿不到。影響範圍：
+2026-08-06 實測：Yahoo `query1` 與 `query2` 兩個 host 對本機 IP 全回 429，
+連 cookie + crumb 流程也拿不到。Yahoo 一掛，技術指標全空、美股整個場次失效。
 
-- 台股：三大法人與融資融券走證交所／櫃買官方 API，**不受影響**；但技術指標靠 Yahoo 一年歷史，會空白
-- 美股：行情與技術面全靠 Yahoo，**整個場次會失效**
+所以 `common.py` 的 `yahoo_chart()` 已改成「先試 Yahoo，掛掉走備援」：
 
-雲端是不同 IP，不一定會遇到。若雲端也持續 429，替代方案是改接證交所
-`STOCK_DAY`（已驗證可取得完整月 OHLC，可往回撈數月拼出一年）算台股技術指標；
-美股則需要另尋免費歷史行情來源（Stooq 有 JS 驗證牆）。
+| 標的 | 備援來源 | 狀態 |
+|---|---|---|
+| 上市（.TW） | 證交所 `STOCK_DAY` 月成交檔 × 13 個月 | ✅ 實測可用 |
+| 上櫃（.TWO） | 櫃買 `tradingStock` 月成交檔 × 13 個月 | ✅ 實測可用 |
+| 加權指數 `^TWII` | 證交所 `MI_5MINS_HIST` | ✅ 實測可用 |
+| 櫃買指數 `^TWOII` | 無 | ⚠️ Yahoo 掛掉時該列消失 |
+| 美股個股／ADR | stockanalysis.com | ✅ 實測可用 |
+| 美股指數 | SOXX／QQQ／SPY ETF 代理 | ⚠️ 非指數點位，見下 |
+
+實際用了哪條路會寫進 `resolved.source` 並進 warnings，報告據實標註。
+
+**美股指數是 ETF 代理，不是指數本身。** SOXX 五百多點 vs 費半六千多點，
+量級完全不同。腳本會把名稱改成「費城半導體（SOXX ETF 代理，非指數點位）」，
+只有漲跌百分比可引用。
+
+試過但不能用的來源：Stooq（JS 驗證牆）、Nasdaq API（`Error while calling vendor`）、
+TPEx 的 `indexInfo/dailyClose` 與 `afterTrading/otcIndex`（回空）。
+
+備援路徑要打 13 個月的月檔，比 Yahoo 慢很多（台股兩檔約 1–2 分鐘），這是刻意的取捨：
+慢但拿得到，好過快但整份空白。
 
 **雲端網路白名單**
 Routine 環境若只放行套件庫等常見開發網域，財經資料來源會被擋，
