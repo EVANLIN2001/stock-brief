@@ -1,0 +1,58 @@
+name: 美股資料抓取
+
+# 同 fetch-tw.yml 的理由：雲端 routine 連不出去，資料由 GitHub Actions 代抓。
+
+on:
+  schedule:
+    # 21:30 UTC = 台北隔天 05:30，週一～五（對應週一～五的美股交易日）。
+    # 美股夏令 04:00、冬令 05:00（台北時間）收盤，05:30 兩種都拿得到完整收盤，
+    # 再留 30 分鐘給 06:00 的 routine。
+    - cron: '30 21 * * 1-5'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: stock-brief-data
+  cancel-in-progress: false
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: 抓美股資料
+        run: |
+          mkdir -p data
+          python3 .claude/skills/stock-daily-brief/scripts/fetch_us.py --out data/data_us.json
+
+      - name: 檢查有沒有真的抓到東西
+        run: |
+          python3 - <<'PY'
+          import json, sys
+          d = json.load(open('data/data_us.json', encoding='utf-8'))
+          print('交易日:', d.get('trading_date'), '| 標的:', len(d.get('stocks') or []))
+          for w in d.get('warnings') or []:
+              print('  warn:', w)
+          if not d.get('trading_date'):
+              sys.exit('沒有任何交易日資料，不 commit')
+          PY
+
+      - name: Commit
+        run: |
+          git config user.name "stock-brief bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/data_us.json
+          if git diff --staged --quiet; then
+            echo "資料沒變（可能休市），不建 commit"
+            exit 0
+          fi
+          git commit -m "美股資料 $(TZ=Asia/Taipei date +%Y-%m-%d)"
+          git pull --rebase --autostash origin main
+          git push origin main

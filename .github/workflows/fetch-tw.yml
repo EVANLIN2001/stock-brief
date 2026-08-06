@@ -1,0 +1,61 @@
+name: 台股資料抓取
+
+# Claude routine 跑在 Anthropic 雲端，egress proxy 擋掉所有財經網域（CONNECT 403），
+# 所以資料抓取搬到 GitHub Actions（網路不受限），把結果 commit 進 data/。
+# routine 15 分鐘後才跑，直接讀 data/data_tw.json，不用自己連外。
+
+on:
+  schedule:
+    # 07:30 UTC = 台北 15:30，週一～五。
+    # 證交所三大法人日報約 15:00 發布，抓完留 30 分鐘給 16:00 的 routine。
+    - cron: '30 7 * * 1-5'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  # 跟美股那條共用同一個 branch，不要同時 push
+  group: stock-brief-data
+  cancel-in-progress: false
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: 抓台股資料
+        run: |
+          mkdir -p data
+          python3 .claude/skills/stock-daily-brief/scripts/fetch_tw.py --out data/data_tw.json
+
+      - name: 檢查有沒有真的抓到東西
+        run: |
+          python3 - <<'PY'
+          import json, sys
+          d = json.load(open('data/data_tw.json', encoding='utf-8'))
+          print('交易日:', d.get('trading_date'), '| 標的:', len(d.get('stocks') or []))
+          for w in d.get('warnings') or []:
+              print('  warn:', w)
+          # 完全沒有交易日 = 每個來源都掛了，這種檔 commit 進去只會誤導 routine
+          if not d.get('trading_date'):
+              sys.exit('沒有任何交易日資料，不 commit')
+          PY
+
+      - name: Commit
+        run: |
+          git config user.name "stock-brief bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/data_tw.json
+          if git diff --staged --quiet; then
+            echo "資料沒變（可能休市），不建 commit"
+            exit 0
+          fi
+          git commit -m "台股資料 $(TZ=Asia/Taipei date +%Y-%m-%d)"
+          git pull --rebase --autostash origin main
+          git push origin main

@@ -6,8 +6,9 @@ __MACOSX/
 __pycache__/
 *.pyc
 
-# 中繼資料（每次執行都會重產，不需要進版控）
+# 本機隨手跑出來的中繼檔（錨在根目錄，不要連 data/ 底下的一起忽略——
+# data/ 是 GitHub Actions 每天 commit 進來的正式資料，雲端 routine 就靠它）
 /tmp/
-data_tw.json
-data_us.json
-notes.json
+/data_tw.json
+/data_us.json
+/notes.json
