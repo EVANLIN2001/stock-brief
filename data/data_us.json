@@ -1,7 +1,7 @@
 {
  "market": "us",
- "generated_at": "2026-09-01 08:43",
- "trading_date": "2026-08-31",
+ "generated_at": "2026-09-02 07:27",
+ "trading_date": "2026-09-01",
  "stocks": [
   {
    "symbol": "MU",
@@ -9,46 +9,41 @@
    "currency": "USD",
    "market_state": null,
    "technical": {
-    "close": 958.73,
-    "prev_close": 932.86,
-    "change": 25.87,
-    "change_pct": 2.77,
-    "ma5": 939.67,
-    "ma10": 942.78,
-    "ma20": 927.34,
-    "ma60": 957.99,
-    "bias20": 3.39,
-    "rsi14": 53.8,
-    "k9": 49.6,
-    "d9": 45.7,
-    "dif": 7.998,
-    "macd": 5.414,
-    "osc": 2.584,
+    "close": 933.38,
+    "prev_close": 958.73,
+    "change": -25.35,
+    "change_pct": -2.64,
+    "ma5": 939.75,
+    "ma10": 942.04,
+    "ma20": 929.37,
+    "ma60": 959.15,
+    "bias20": 0.43,
+    "rsi14": 50.4,
+    "k9": 47.9,
+    "d9": 46.5,
+    "dif": 7.032,
+    "macd": 5.738,
+    "osc": 1.294,
     "high52": 1213.56,
-    "low52": 118.72,
-    "pct_from_high52": -21.0,
-    "vol": 22488906.0,
-    "vol_ma5": 22420465,
-    "vol_ratio": 1.0,
+    "low52": 124.21,
+    "pct_from_high52": -23.09,
+    "vol": 27517154.0,
+    "vol_ma5": 24091259,
+    "vol_ratio": 1.14,
     "ma_alignment": "均線糾結"
    },
    "resolved": {
-    "date": "2026-08-31",
-    "open": 931.39,
-    "high": 959.97,
-    "low": 930.79,
-    "close": 958.73,
-    "change": 25.87,
-    "change_pct": 2.77,
-    "volume_shares": 22488906.0,
+    "date": "2026-09-01",
+    "open": 941.125,
+    "high": 969.44,
+    "low": 922.39,
+    "close": 933.38,
+    "change": -25.35,
+    "change_pct": -2.64,
+    "volume_shares": 27517154.0,
     "source": "stockanalysis.com"
    },
    "history": [
-    {
-     "d": "2026-06-05",
-     "c": 864.01,
-     "v": 77250536.0
-    },
     {
      "d": "2026-06-08",
      "c": 949.28,
@@ -343,6 +338,11 @@
      "d": "2026-08-31",
      "c": 958.73,
      "v": 22488906.0
+    },
+    {
+     "d": "2026-09-01",
+     "c": 933.38,
+     "v": 27517154.0
     }
    ]
   }
@@ -351,40 +351,40 @@
   {
    "symbol": "^SOX",
    "name": "費城半導體（SOXX ETF 代理，非指數點位）",
-   "close": 511.04,
-   "change": 2.42,
-   "change_pct": 0.48,
-   "date": "2026-08-31",
+   "close": 500.31,
+   "change": -10.73,
+   "change_pct": -2.1,
+   "date": "2026-09-01",
    "source": "stockanalysis.com（iShares 半導體 ETF，費半代理）",
    "proxy": "SOXX"
   },
   {
    "symbol": "^IXIC",
    "name": "那斯達克（QQQ ETF 代理，非指數點位）",
-   "close": 716.76,
-   "change": 0.33,
-   "change_pct": 0.05,
-   "date": "2026-08-31",
+   "close": 707.77,
+   "change": -8.99,
+   "change_pct": -1.25,
+   "date": "2026-09-01",
    "source": "stockanalysis.com（Invesco QQQ，那斯達克代理）",
    "proxy": "QQQ"
   },
   {
    "symbol": "^GSPC",
    "name": "S&P 500（SPY ETF 代理，非指數點位）",
-   "close": 767.05,
-   "change": -2.3,
-   "change_pct": -0.3,
-   "date": "2026-08-31",
+   "close": 761.78,
+   "change": -5.27,
+   "change_pct": -0.69,
+   "date": "2026-09-01",
    "source": "stockanalysis.com（SPDR S&P 500 ETF，S&P 500 代理）",
    "proxy": "SPY"
   },
   {
    "symbol": "TSM",
    "name": "台積電 ADR",
-   "close": 415.32,
-   "change": -2.2,
-   "change_pct": -0.53,
-   "date": "2026-08-31",
+   "close": 414.0,
+   "change": -1.32,
+   "change_pct": -0.32,
+   "date": "2026-09-01",
    "source": "stockanalysis.com",
    "proxy": null
   }
