@@ -1,7 +1,7 @@
 {
  "market": "tw",
- "generated_at": "2026-09-21 22:24",
- "trading_date": "2026-09-21",
+ "generated_at": "2026-09-22 20:44",
+ "trading_date": "2026-09-22",
  "stocks": [
   {
    "code": "2330",
@@ -9,69 +9,64 @@
    "market": "TWSE",
    "yahoo": "2330.TW",
    "quote": {
-    "date": "2026-09-18",
+    "date": "2026-09-21",
     "name": "台積電",
-    "open": 2460.0,
-    "high": 2460.0,
-    "low": 2435.0,
-    "close": 2460.0,
-    "change": 35.0,
-    "volume_shares": 40892688.0,
-    "turnover": 100394074139.0,
-    "transactions": 69571.0
+    "open": 2445.0,
+    "high": 2485.0,
+    "low": 2445.0,
+    "close": 2480.0,
+    "change": 20.0,
+    "volume_shares": 16086510.0,
+    "turnover": 39772729100.0,
+    "transactions": 69432.0
    },
    "chips": {
-    "date": "2026-09-21",
-    "foreign_net": 2689.504,
-    "trust_net": 734.606,
-    "dealer_net": 614.602,
-    "total_net": 4038.712,
+    "date": "2026-09-22",
+    "foreign_net": -4329.504,
+    "trust_net": -405.634,
+    "dealer_net": 467.394,
+    "total_net": -4267.744,
     "unit": "張"
    },
    "margin": {
-    "margin_balance": 28763.0,
-    "margin_change": -385.0,
-    "short_balance": 15.0,
-    "short_change": 4.0,
+    "margin_balance": 28742.0,
+    "margin_change": -21.0,
+    "short_balance": 16.0,
+    "short_change": 1.0,
     "unit": "張",
     "date": null,
     "note": "證交所此檔未附日期欄位，取最新發布值，可能落後收盤一日"
    },
    "valuation": {
-    "pe": 28.52,
+    "pe": 28.75,
     "yield": 0.89,
-    "pb": 9.92
+    "pb": 10.0
    },
    "technical": {
-    "close": 2480.0,
-    "prev_close": 2460.0,
-    "change": 20.0,
-    "change_pct": 0.81,
-    "ma5": 2426.0,
-    "ma10": 2430.5,
-    "ma20": 2422.0,
-    "ma60": 2399.33,
-    "bias20": 2.39,
-    "rsi14": 59.6,
-    "k9": 55.9,
-    "d9": 41.2,
-    "dif": 13.001,
-    "macd": 10.263,
-    "osc": 2.738,
+    "close": 2460.0,
+    "prev_close": 2480.0,
+    "change": -20.0,
+    "change_pct": -0.81,
+    "ma5": 2441.0,
+    "ma10": 2429.5,
+    "ma20": 2425.0,
+    "ma60": 2400.83,
+    "bias20": 1.44,
+    "rsi14": 56.3,
+    "k9": 58.3,
+    "d9": 46.9,
+    "dif": 14.556,
+    "macd": 11.121,
+    "osc": 3.435,
     "high52": 2510.0,
-    "low52": 1225.0,
-    "pct_from_high52": -1.2,
-    "vol": 16086510.0,
-    "vol_ma5": 22246242,
-    "vol_ratio": 0.72,
+    "low52": 1240.0,
+    "pct_from_high52": -1.99,
+    "vol": 22009927.0,
+    "vol_ma5": 23605077,
+    "vol_ratio": 0.93,
     "ma_alignment": "多頭排列"
    },
    "history": [
-    {
-     "d": "2026-06-29",
-     "c": 2370.0,
-     "v": 38133782.0
-    },
     {
      "d": "2026-06-30",
      "c": 2410.0,
@@ -366,17 +361,22 @@
      "d": "2026-09-21",
      "c": 2480.0,
      "v": 16086510.0
+    },
+    {
+     "d": "2026-09-22",
+     "c": 2460.0,
+     "v": 22009927.0
     }
    ],
    "resolved": {
-    "date": "2026-09-21",
-    "open": 2445.0,
-    "high": 2485.0,
-    "low": 2445.0,
-    "close": 2480.0,
-    "change": 20.0,
-    "change_pct": 0.81,
-    "volume_shares": 16086510.0,
+    "date": "2026-09-22",
+    "open": 2505.0,
+    "high": 2510.0,
+    "low": 2460.0,
+    "close": 2460.0,
+    "change": -20.0,
+    "change_pct": -0.81,
+    "volume_shares": 22009927.0,
     "source": "證交所官方月成交檔（官方日成交檔尚未更新）"
    }
   },
@@ -386,23 +386,23 @@
    "market": "TPEx",
    "yahoo": "5425.TWO",
    "quote": {
-    "date": "2026-09-21",
+    "date": "2026-09-22",
     "name": "台半",
-    "open": 93.0,
-    "high": 93.5,
-    "low": 92.3,
-    "close": 93.3,
-    "change": 0.7,
-    "volume_shares": 3155000.0,
-    "turnover": 293034300.0,
-    "transactions": 2281.0
+    "open": 94.5,
+    "high": 95.3,
+    "low": 93.5,
+    "close": 93.5,
+    "change": 0.2,
+    "volume_shares": 9070000.0,
+    "turnover": 856659100.0,
+    "transactions": 6119.0
    },
    "chips": {
-    "date": "2026-09-21",
-    "foreign_net": 496.884,
+    "date": "2026-09-22",
+    "foreign_net": 2179.193,
     "trust_net": 0.0,
-    "dealer_net": 29.585,
-    "total_net": 526.469,
+    "dealer_net": 93.762,
+    "total_net": 2272.955,
     "unit": "張"
    },
    "margin": {
@@ -415,35 +415,30 @@
     "unit": "張"
    },
    "technical": {
-    "close": 93.3,
-    "prev_close": 92.6,
-    "change": 0.7,
-    "change_pct": 0.76,
-    "ma5": 92.54,
-    "ma10": 90.78,
-    "ma20": 92.14,
-    "ma60": 95.33,
-    "bias20": 1.26,
-    "rsi14": 53.3,
-    "k9": 68.2,
-    "d9": 55.3,
-    "dif": 0.32,
-    "macd": 0.022,
-    "osc": 0.297,
+    "close": 93.5,
+    "prev_close": 93.3,
+    "change": 0.2,
+    "change_pct": 0.21,
+    "ma5": 93.36,
+    "ma10": 91.17,
+    "ma20": 92.42,
+    "ma60": 95.06,
+    "bias20": 1.17,
+    "rsi14": 53.6,
+    "k9": 72.3,
+    "d9": 61.0,
+    "dif": 0.44,
+    "macd": 0.106,
+    "osc": 0.334,
     "high52": 144.0,
     "low52": 50.8,
-    "pct_from_high52": -35.21,
-    "vol": 3223000.0,
-    "vol_ma5": 13039400,
-    "vol_ratio": 0.25,
+    "pct_from_high52": -35.07,
+    "vol": 9211000.0,
+    "vol_ma5": 11925400,
+    "vol_ratio": 0.77,
     "ma_alignment": "均線糾結"
    },
    "history": [
-    {
-     "d": "2026-06-29",
-     "c": 110.0,
-     "v": 5696000.0
-    },
     {
      "d": "2026-06-30",
      "c": 120.5,
@@ -738,21 +733,26 @@
      "d": "2026-09-21",
      "c": 93.3,
      "v": 3223000.0
+    },
+    {
+     "d": "2026-09-22",
+     "c": 93.5,
+     "v": 9211000.0
     }
    ],
    "resolved": {
-    "date": "2026-09-21",
+    "date": "2026-09-22",
     "name": "台半",
-    "open": 93.0,
-    "high": 93.5,
-    "low": 92.3,
-    "close": 93.3,
-    "change": 0.7,
-    "volume_shares": 3155000.0,
-    "turnover": 293034300.0,
-    "transactions": 2281.0,
+    "open": 94.5,
+    "high": 95.3,
+    "low": 93.5,
+    "close": 93.5,
+    "change": 0.2,
+    "volume_shares": 9070000.0,
+    "turnover": 856659100.0,
+    "transactions": 6119.0,
     "source": "證交所/櫃買官方",
-    "change_pct": 0.76
+    "change_pct": 0.21
    }
   }
  ],
@@ -760,17 +760,17 @@
   {
    "symbol": "^TWII",
    "name": "加權指數",
-   "close": 47718.84,
-   "change": 538.09,
-   "change_pct": 1.14,
-   "date": "2026-09-21",
+   "close": 47800.17,
+   "change": 81.33,
+   "change_pct": 0.17,
+   "date": "2026-09-22",
    "source": "證交所加權指數月歷史",
    "proxy": null
   }
  ],
  "warnings": [
   "2330 Yahoo 不可用，技術面改用證交所官方月成交檔計算",
-  "2330 證交所/櫃買日成交檔只到 2026-09-18，價格改用證交所官方月成交檔 2026-09-21 收盤",
+  "2330 證交所/櫃買日成交檔只到 2026-09-21，價格改用證交所官方月成交檔 2026-09-22 收盤",
   "5425 Yahoo 不可用，技術面改用櫃買官方月成交檔計算"
  ]
 }
