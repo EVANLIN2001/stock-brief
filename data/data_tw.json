@@ -1,6 +1,6 @@
 {
  "market": "tw",
- "generated_at": "2026-09-24 20:49",
+ "generated_at": "2026-09-25 20:52",
  "trading_date": "2026-09-24",
  "stocks": [
   {
@@ -9,16 +9,16 @@
    "market": "TWSE",
    "yahoo": "2330.TW",
    "quote": {
-    "date": "2026-09-23",
+    "date": "2026-09-24",
     "name": "台積電",
-    "open": 2475.0,
-    "high": 2505.0,
-    "low": 2475.0,
-    "close": 2500.0,
-    "change": 40.0,
-    "volume_shares": 22817873.0,
-    "turnover": 56893530280.0,
-    "transactions": 65303.0
+    "open": 2480.0,
+    "high": 2490.0,
+    "low": 2470.0,
+    "close": 2475.0,
+    "change": -25.0,
+    "volume_shares": 14557662.0,
+    "turnover": 36107476243.0,
+    "transactions": 75382.0
    },
    "chips": {
     "date": "2026-09-24",
@@ -29,18 +29,18 @@
     "unit": "張"
    },
    "margin": {
-    "margin_balance": 28833.0,
-    "margin_change": -692.0,
-    "short_balance": 18.0,
-    "short_change": 7.0,
+    "margin_balance": 29707.0,
+    "margin_change": 874.0,
+    "short_balance": 16.0,
+    "short_change": -2.0,
     "unit": "張",
     "date": null,
     "note": "證交所此檔未附日期欄位，取最新發布值，可能落後收盤一日"
    },
    "valuation": {
-    "pe": 28.98,
-    "yield": 0.88,
-    "pb": 10.08
+    "pe": 28.69,
+    "yield": 0.89,
+    "pb": 9.98
    },
    "technical": {
     "close": 2475.0,
@@ -370,14 +370,17 @@
    ],
    "resolved": {
     "date": "2026-09-24",
+    "name": "台積電",
     "open": 2480.0,
     "high": 2490.0,
     "low": 2470.0,
     "close": 2475.0,
     "change": -25.0,
-    "change_pct": -1.0,
     "volume_shares": 14557662.0,
-    "source": "證交所官方月成交檔（官方日成交檔尚未更新）"
+    "turnover": 36107476243.0,
+    "transactions": 75382.0,
+    "source": "證交所/櫃買官方",
+    "change_pct": -1.0
    }
   },
   {
@@ -406,12 +409,12 @@
     "unit": "張"
    },
    "margin": {
-    "date": "2026-09-23",
-    "margin_balance": 12785.0,
-    "margin_change": 736.0,
-    "margin_util": 19.4,
-    "short_balance": 364.0,
-    "short_change": 115.0,
+    "date": "2026-09-24",
+    "margin_balance": 13023.0,
+    "margin_change": 238.0,
+    "margin_util": 19.77,
+    "short_balance": 306.0,
+    "short_change": -58.0,
     "unit": "張"
    },
    "technical": {
@@ -770,7 +773,6 @@
  ],
  "warnings": [
   "2330 Yahoo 不可用，技術面改用證交所官方月成交檔計算",
-  "2330 證交所/櫃買日成交檔只到 2026-09-23，價格改用證交所官方月成交檔 2026-09-24 收盤",
   "5425 Yahoo 不可用，技術面改用櫃買官方月成交檔計算"
  ]
 }
