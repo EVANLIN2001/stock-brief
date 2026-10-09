@@ -1,6 +1,6 @@
 {
  "market": "tw",
- "generated_at": "2026-10-08 22:45",
+ "generated_at": "2026-10-09 22:28",
  "trading_date": "2026-10-08",
  "stocks": [
   {
@@ -9,16 +9,16 @@
    "market": "TWSE",
    "yahoo": "2330.TW",
    "quote": {
-    "date": "2026-10-07",
+    "date": "2026-10-08",
     "name": "台積電",
-    "open": 2565.0,
-    "high": 2585.0,
-    "low": 2560.0,
-    "close": 2585.0,
-    "change": 0.0,
-    "volume_shares": 16941183.0,
-    "turnover": 43643595922.0,
-    "transactions": 70880.0
+    "open": 2550.0,
+    "high": 2575.0,
+    "low": 2550.0,
+    "close": 2550.0,
+    "change": -35.0,
+    "volume_shares": 23145193.0,
+    "turnover": 59167379273.0,
+    "transactions": 141976.0
    },
    "chips": {
     "date": "2026-10-08",
@@ -29,18 +29,18 @@
     "unit": "張"
    },
    "margin": {
-    "margin_balance": 30278.0,
-    "margin_change": -222.0,
-    "short_balance": 50.0,
-    "short_change": 1.0,
+    "margin_balance": 31586.0,
+    "margin_change": 1308.0,
+    "short_balance": 45.0,
+    "short_change": -5.0,
     "unit": "張",
     "date": null,
     "note": "證交所此檔未附日期欄位，取最新發布值，可能落後收盤一日"
    },
    "valuation": {
-    "pe": 29.96,
-    "yield": 0.85,
-    "pb": 10.42
+    "pe": 29.56,
+    "yield": 0.86,
+    "pb": 10.28
    },
    "technical": {
     "close": 2550.0,
@@ -370,14 +370,17 @@
    ],
    "resolved": {
     "date": "2026-10-08",
+    "name": "台積電",
     "open": 2550.0,
     "high": 2575.0,
     "low": 2550.0,
     "close": 2550.0,
     "change": -35.0,
-    "change_pct": -1.35,
     "volume_shares": 23145193.0,
-    "source": "證交所官方月成交檔（官方日成交檔尚未更新）"
+    "turnover": 59167379273.0,
+    "transactions": 141976.0,
+    "source": "證交所/櫃買官方",
+    "change_pct": -1.35
    }
   },
   {
@@ -770,7 +773,6 @@
  ],
  "warnings": [
   "2330 Yahoo 不可用，技術面改用證交所官方月成交檔計算",
-  "2330 證交所/櫃買日成交檔只到 2026-10-07，價格改用證交所官方月成交檔 2026-10-08 收盤",
   "5425 Yahoo 不可用，技術面改用櫃買官方月成交檔計算"
  ]
 }
