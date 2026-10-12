@@ -1,7 +1,7 @@
 {
  "market": "tw",
- "generated_at": "2026-10-09 22:28",
- "trading_date": "2026-10-08",
+ "generated_at": "2026-10-13 00:53",
+ "trading_date": "2026-10-12",
  "stocks": [
   {
    "code": "2330",
@@ -43,35 +43,30 @@
     "pb": 10.28
    },
    "technical": {
-    "close": 2550.0,
-    "prev_close": 2585.0,
-    "change": -35.0,
-    "change_pct": -1.35,
-    "ma5": 2559.0,
-    "ma10": 2523.5,
-    "ma20": 2476.5,
-    "ma60": 2413.67,
-    "bias20": 2.97,
-    "rsi14": 61.5,
-    "k9": 83.5,
-    "d9": 85.1,
-    "dif": 40.703,
-    "macd": 30.59,
-    "osc": 10.113,
+    "close": 2540.0,
+    "prev_close": 2550.0,
+    "change": -10.0,
+    "change_pct": -0.39,
+    "ma5": 2567.0,
+    "ma10": 2527.5,
+    "ma20": 2480.25,
+    "ma60": 2415.33,
+    "bias20": 2.41,
+    "rsi14": 59.6,
+    "k9": 74.5,
+    "d9": 81.6,
+    "dif": 39.292,
+    "macd": 32.33,
+    "osc": 6.962,
     "high52": 2585.0,
     "low52": 1325.0,
-    "pct_from_high52": -1.35,
-    "vol": 23145193.0,
-    "vol_ma5": 20696114,
-    "vol_ratio": 1.12,
+    "pct_from_high52": -1.74,
+    "vol": 23555768.0,
+    "vol_ma5": 22248827,
+    "vol_ratio": 1.06,
     "ma_alignment": "均線糾結"
    },
    "history": [
-    {
-     "d": "2026-07-15",
-     "c": 2440.0,
-     "v": 33665566.0
-    },
     {
      "d": "2026-07-16",
      "c": 2470.0,
@@ -366,21 +361,23 @@
      "d": "2026-10-08",
      "c": 2550.0,
      "v": 23145193.0
+    },
+    {
+     "d": "2026-10-12",
+     "c": 2540.0,
+     "v": 23555768.0
     }
    ],
    "resolved": {
-    "date": "2026-10-08",
-    "name": "台積電",
-    "open": 2550.0,
-    "high": 2575.0,
-    "low": 2550.0,
-    "close": 2550.0,
-    "change": -35.0,
-    "volume_shares": 23145193.0,
-    "turnover": 59167379273.0,
-    "transactions": 141976.0,
-    "source": "證交所/櫃買官方",
-    "change_pct": -1.35
+    "date": "2026-10-12",
+    "open": 2510.0,
+    "high": 2550.0,
+    "low": 2510.0,
+    "close": 2540.0,
+    "change": -10.0,
+    "change_pct": -0.39,
+    "volume_shares": 23555768.0,
+    "source": "證交所官方月成交檔（官方日成交檔尚未更新）"
    }
   },
   {
@@ -389,64 +386,59 @@
    "market": "TPEx",
    "yahoo": "5425.TWO",
    "quote": {
-    "date": "2026-10-08",
+    "date": "2026-10-12",
     "name": "台半",
-    "open": 102.5,
-    "high": 103.5,
-    "low": 99.9,
+    "open": 99.0,
+    "high": 101.5,
+    "low": 98.8,
     "close": 100.5,
-    "change": -4.0,
-    "volume_shares": 7279000.0,
-    "turnover": 735184000.0,
-    "transactions": 4846.0
+    "change": 0.0,
+    "volume_shares": 4097000.0,
+    "turnover": 411315500.0,
+    "transactions": 2869.0
    },
    "chips": {
-    "date": "2026-10-08",
-    "foreign_net": -1578.485,
+    "date": "2026-10-12",
+    "foreign_net": 159.457,
     "trust_net": 0.0,
-    "dealer_net": -223.671,
-    "total_net": -1802.156,
+    "dealer_net": 71.369,
+    "total_net": 230.826,
     "unit": "張"
    },
    "margin": {
-    "date": "2026-10-08",
-    "margin_balance": 13342.0,
-    "margin_change": -461.0,
-    "margin_util": 20.25,
-    "short_balance": 319.0,
-    "short_change": -43.0,
+    "date": "2026-10-12",
+    "margin_balance": 13199.0,
+    "margin_change": -143.0,
+    "margin_util": 20.03,
+    "short_balance": 315.0,
+    "short_change": -4.0,
     "unit": "張"
    },
    "technical": {
     "close": 100.5,
-    "prev_close": 104.5,
-    "change": -4.0,
-    "change_pct": -3.83,
-    "ma5": 102.6,
-    "ma10": 99.25,
-    "ma20": 95.21,
-    "ma60": 90.39,
-    "bias20": 5.56,
+    "prev_close": 100.5,
+    "change": 0.0,
+    "change_pct": 0.0,
+    "ma5": 102.3,
+    "ma10": 99.73,
+    "ma20": 95.73,
+    "ma60": 90.27,
+    "bias20": 4.98,
     "rsi14": 56.9,
-    "k9": 54.2,
-    "d9": 65.2,
-    "dif": 2.903,
-    "macd": 2.048,
-    "osc": 0.855,
+    "k9": 48.5,
+    "d9": 59.7,
+    "dif": 2.815,
+    "macd": 2.201,
+    "osc": 0.613,
     "high52": 144.0,
     "low52": 50.8,
     "pct_from_high52": -30.21,
-    "vol": 7410000.0,
-    "vol_ma5": 19710400,
-    "vol_ratio": 0.38,
+    "vol": 4225000.0,
+    "vol_ma5": 16151000,
+    "vol_ratio": 0.26,
     "ma_alignment": "均線糾結"
    },
    "history": [
-    {
-     "d": "2026-07-15",
-     "c": 107.5,
-     "v": 13745000.0
-    },
     {
      "d": "2026-07-16",
      "c": 102.0,
@@ -741,21 +733,26 @@
      "d": "2026-10-08",
      "c": 100.5,
      "v": 7410000.0
+    },
+    {
+     "d": "2026-10-12",
+     "c": 100.5,
+     "v": 4225000.0
     }
    ],
    "resolved": {
-    "date": "2026-10-08",
+    "date": "2026-10-12",
     "name": "台半",
-    "open": 102.5,
-    "high": 103.5,
-    "low": 99.9,
+    "open": 99.0,
+    "high": 101.5,
+    "low": 98.8,
     "close": 100.5,
-    "change": -4.0,
-    "volume_shares": 7279000.0,
-    "turnover": 735184000.0,
-    "transactions": 4846.0,
+    "change": 0.0,
+    "volume_shares": 4097000.0,
+    "turnover": 411315500.0,
+    "transactions": 2869.0,
     "source": "證交所/櫃買官方",
-    "change_pct": -3.83
+    "change_pct": 0.0
    }
   }
  ],
@@ -763,16 +760,17 @@
   {
    "symbol": "^TWII",
    "name": "加權指數",
-   "close": 49313.44,
-   "change": -492.93,
-   "change_pct": -0.99,
-   "date": "2026-10-08",
+   "close": 49301.96,
+   "change": -11.48,
+   "change_pct": -0.02,
+   "date": "2026-10-12",
    "source": "證交所加權指數月歷史",
    "proxy": null
   }
  ],
  "warnings": [
   "2330 Yahoo 不可用，技術面改用證交所官方月成交檔計算",
+  "2330 證交所/櫃買日成交檔只到 2026-10-08，價格改用證交所官方月成交檔 2026-10-12 收盤",
   "5425 Yahoo 不可用，技術面改用櫃買官方月成交檔計算"
  ]
 }
